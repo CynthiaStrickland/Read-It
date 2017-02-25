@@ -1,17 +1,13 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "scale" : "1x"
+      "idiom" : "universal"
     },
     {
       "idiom" : "universal",
       "filename" : "amazon_icon@2x.png",
+      "unassigned" : true,
       "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
     }
   ],
   "info" : {

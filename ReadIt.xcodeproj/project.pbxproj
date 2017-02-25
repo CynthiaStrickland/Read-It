@@ -11,6 +11,7 @@
 		8168781A1E610D2000EB29D3 /* steve_jobs.imageset in Resources */ = {isa = PBXBuildFile; fileRef = 816878191E610D2000EB29D3 /* steve_jobs.imageset */; };
 		8168781C1E610D2E00EB29D3 /* bill_gates.imageset in Resources */ = {isa = PBXBuildFile; fileRef = 8168781B1E610D2E00EB29D3 /* bill_gates.imageset */; };
 		8168781E1E610D4B00EB29D3 /* amazon_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8168781D1E610D4B00EB29D3 /* amazon_icon@2x.png */; };
+		816878201E610DCD00EB29D3 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168781F1E610DCD00EB29D3 /* Books.swift */; };
 		81C7E9251E61088600AF5432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7E9241E61088600AF5432 /* AppDelegate.swift */; };
 		81C7E9271E61088600AF5432 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7E9261E61088600AF5432 /* ViewController.swift */; };
 		81C7E92C1E61088600AF5432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C7E92B1E61088600AF5432 /* Assets.xcassets */; };
@@ -41,10 +42,11 @@
 		816878191E610D2000EB29D3 /* steve_jobs.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = steve_jobs.imageset; sourceTree = "<group>"; };
 		8168781B1E610D2E00EB29D3 /* bill_gates.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bill_gates.imageset; sourceTree = "<group>"; };
 		8168781D1E610D4B00EB29D3 /* amazon_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amazon_icon@2x.png"; sourceTree = "<group>"; };
+		8168781F1E610DCD00EB29D3 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		81C7E9211E61088600AF5432 /* ReadIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C7E9241E61088600AF5432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C7E9261E61088600AF5432 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		81C7E92B1E61088600AF5432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81C7E92B1E61088600AF5432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ReadIt/Assets.xcassets; sourceTree = "<group>"; };
 		81C7E92E1E61088600AF5432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81C7E9301E61088600AF5432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81C7E9351E61088600AF5432 /* ReadItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 		816878141E610A7B00EB29D3 /* MODAL */ = {
 			isa = PBXGroup;
 			children = (
+				8168781F1E610DCD00EB29D3 /* Books.swift */,
 			);
 			name = MODAL;
 			sourceTree = "<group>";
@@ -109,6 +112,7 @@
 				81C7E9381E61088600AF5432 /* ReadItTests */,
 				81C7E9431E61088600AF5432 /* ReadItUITests */,
 				81C7E9221E61088600AF5432 /* Products */,
+				81C7E92B1E61088600AF5432 /* Assets.xcassets */,
 				81C7E92D1E61088600AF5432 /* LaunchScreen.storyboard */,
 				8168781D1E610D4B00EB29D3 /* amazon_icon@2x.png */,
 				8168781B1E610D2E00EB29D3 /* bill_gates.imageset */,
@@ -134,7 +138,6 @@
 				816878161E610A9300EB29D3 /* VIEWS */,
 				816878151E610A8400EB29D3 /* CONTROLLERS */,
 				816878141E610A7B00EB29D3 /* MODAL */,
-				81C7E92B1E61088600AF5432 /* Assets.xcassets */,
 				81C7E9301E61088600AF5432 /* Info.plist */,
 			);
 			path = ReadIt;
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81C7E9271E61088600AF5432 /* ViewController.swift in Sources */,
+				816878201E610DCD00EB29D3 /* Books.swift in Sources */,
 				81C7E9251E61088600AF5432 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
