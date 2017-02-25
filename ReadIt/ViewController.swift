@@ -8,27 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UITableViewController {
 
     let book = [Books]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-    
+        navigationItem.title = "KINDLE"
+        tableView.register(BookCell.self, forCellReuseIdentifier: "cell")
+        setupBooks()
+        tableView.tableFooterView = UIView()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func setupBooks() {
+        
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         
         return cell
     }
+    
+    
 }
 
