@@ -1,13 +1,17 @@
 {
   "images" : [
     {
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "bill_gates.jpg",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "bill_gates.jpg",
-      "unassigned" : true,
-      "scale" : "1x"
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

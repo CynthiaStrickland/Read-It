@@ -1,5 +1,5 @@
 //
-//  Books.swift
+//  Book.swift
 //  ReadIt
 //
 //  Created by Cynthia Whitlatch on 2/24/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Books {
+class Book {
     var title : String?
     var author: String?
     var dateRead : NSDate?

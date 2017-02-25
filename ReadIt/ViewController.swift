@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    let book = [Books]()
+    var books = [Book]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +23,20 @@ class ViewController: UITableViewController {
     
     func setupBooks() {
         
+        let date = NSDate()
+        
+        let book = Book(title: "Steve Jobs", author: "Steve", dateRead: date, notes: "Great")
+        let book2 = Book(title: "Bill Gates Autobiography", author: "Michael", dateRead: date, notes: "Great")
+        
+        self.books = [book, book2]
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-        
+        return books.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,7 +45,6 @@ class ViewController: UITableViewController {
         
         return cell
     }
-    
     
 }
 
