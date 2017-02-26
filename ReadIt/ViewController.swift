@@ -28,6 +28,7 @@ class ViewController: UITableViewController {
         let book = Book(title: "Steve Jobs", author: "Steve", dateRead: date, notes: "Great")
         let book2 = Book(title: "Bill Gates Autobiography", author: "Michael", dateRead: date, notes: "Great")
         
+        
         self.books = [book, book2]
     }
 

@@ -19,12 +19,28 @@ class BookCell : UITableViewCell {
         
     }()
     
+    let titleLabel : UILabel = {
+        let titleOfBook = UILabel()
+        titleOfBook.text = "This is text for the label"
+        return titleOfBook
+    }()
+    
+    let authorLabel:UILabel = {
+        let authorOfBook = UILabel()
+        authorOfBook.text = "Author of book"
+        return authorOfBook
+    }()
+    
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         addSubview(coverImageView)
         coverImageView.frame = CGRect(x: 8, y: 8, width: 50, height: 64)
-        
+        addSubview(titleLabel)
+        titleLabel.frame = CGRect(x: 66, y: 20, width: 200, height: 20)
+        addSubview(authorLabel)
+        authorLabel.frame = CGRect(x: 66, y: 45, width: 200, height: 20)
     }
     
     required init?(coder aDecoder: NSCoder) {
