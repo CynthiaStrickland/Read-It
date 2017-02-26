@@ -9,43 +9,53 @@
 import UIKit
 
 class ViewController: UITableViewController {
-
-    var books = [Book]()
+    
+    var books: [Book]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationItem.title = "KINDLE"
+        
+        navigationItem.title = "READ IT"
         tableView.register(BookCell.self, forCellReuseIdentifier: "cell")
         setupBooks()
         tableView.tableFooterView = UIView()
+        
     }
-    
-    func setupBooks() {
-        
-        let date = NSDate()
-        
-        let book = Book(title: "Steve Jobs", author: "Steve", dateRead: date, notes: "Great")
-        let book2 = Book(title: "Bill Gates Autobiography", author: "Michael", dateRead: date, notes: "Great")
-        
-        
-        self.books = [book, book2]
-    }
-
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if let count = books?.count{
+            return count
+        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! BookCell
         
+        
+        let myBook = books?[indexPath.row]
+        
+        cell.coverImageView.image = myBook?.bookImage
+        cell.titleLabel.text = myBook?.title
+        cell.authorLabel.text = myBook?.author
         
         return cell
     }
+
+    
+    func setupBooks() {
+        
+        let date = NSDate()
+        let book1 = Book(title: "Steve Jobs", author: "Steve", bookImage: #imageLiteral(resourceName: "steve_jobs.jpg"), dateRead: date, notes: "Great")
+        let book2 = Book(title: "Bill Gates Autobiography", author: "Michael",bookImage: #imageLiteral(resourceName: "bill_gates.jpg"), dateRead: date, notes: "Great")
+        
+        self.books = [book1, book2]
+        
+    }
+
     
 }
 

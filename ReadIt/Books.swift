@@ -1,5 +1,5 @@
 //
-//  Book.swift
+//  Books.swift
 //  ReadIt
 //
 //  Created by Cynthia Whitlatch on 2/24/17.
@@ -9,14 +9,16 @@
 import UIKit
 
 class Book {
-    var title : String?
-    var author: String?
-    var dateRead : NSDate?
-    var notes : String?
+    var title : String
+    var author: String
+    var bookImage: UIImage
+    var dateRead : NSDate
+    var notes : String
     
-    init(title: String, author:String, dateRead: NSDate, notes: String) {
+    init(title: String, author:String, bookImage: UIImage, dateRead: NSDate, notes: String) {
         self.title = title
         self.author = author
+        self.bookImage = bookImage
         self.dateRead = dateRead
         self.notes = notes
     }
