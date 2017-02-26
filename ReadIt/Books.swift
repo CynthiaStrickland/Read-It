@@ -12,10 +12,10 @@ class Book {
     var title : String
     var author: String
     var bookImage: UIImage
-    var dateRead : NSDate
+    var dateRead : String
     var notes : String
     
-    init(title: String, author:String, bookImage: UIImage, dateRead: NSDate, notes: String) {
+    init(title: String, author:String, bookImage: UIImage, dateRead: String, notes: String) {
         self.title = title
         self.author = author
         self.bookImage = bookImage

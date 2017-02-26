@@ -34,23 +34,16 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! BookCell
-        
-        
-        let myBook = books?[indexPath.row]
-        
-        cell.coverImageView.image = myBook?.bookImage
-        cell.titleLabel.text = myBook?.title
-        cell.authorLabel.text = myBook?.author
-        
-        return cell
+            let book = books?[indexPath.row]
+            cell.book = book
+            return cell
     }
 
     
     func setupBooks() {
         
-        let date = NSDate()
-        let book1 = Book(title: "Steve Jobs", author: "Steve", bookImage: #imageLiteral(resourceName: "steve_jobs.jpg"), dateRead: date, notes: "Great")
-        let book2 = Book(title: "Bill Gates Autobiography", author: "Michael",bookImage: #imageLiteral(resourceName: "bill_gates.jpg"), dateRead: date, notes: "Great")
+        let book1 = Book(title: "Steve Jobs", author: "Steve", bookImage: #imageLiteral(resourceName: "steve_jobs.jpg"), dateRead: "Read on 01/23/2017", notes: "Great")
+        let book2 = Book(title: "Bill Gates Autobiography", author: "Michael Becraft",bookImage: #imageLiteral(resourceName: "bill_gates.jpg"), dateRead: "Read on 02/02/2017", notes: "Great")
         
         self.books = [book1, book2]
         

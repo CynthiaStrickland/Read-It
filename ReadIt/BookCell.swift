@@ -10,6 +10,16 @@ import UIKit
 
 class BookCell : UITableViewCell {
     
+    var book: Book? {
+        didSet {
+                        
+            coverImageView.image = book?.bookImage
+            titleLabel.text = book?.title
+            authorLabel.text = book?.author
+            dateReadLabel.text = book?.dateRead
+            
+        }
+    }
     let coverImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "steve_jobs")
@@ -20,17 +30,21 @@ class BookCell : UITableViewCell {
     let titleLabel : UILabel = {
         let titleOfBook = UILabel()
         titleOfBook.translatesAutoresizingMaskIntoConstraints = false
-        titleOfBook.text = "Book"
         return titleOfBook
     }()
     
     let authorLabel:UILabel = {
         let authorOfBook = UILabel()
         authorOfBook.translatesAutoresizingMaskIntoConstraints = false
-        authorOfBook.text = "Author of book"
         return authorOfBook
     }()
     
+    let dateReadLabel:UILabel = {
+        let date = UILabel()
+        date.translatesAutoresizingMaskIntoConstraints = false
+        date.font = UIFont.boldSystemFont(ofSize: 11)
+        return date
+    }()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -45,13 +59,19 @@ class BookCell : UITableViewCell {
         titleLabel.leftAnchor.constraint(equalTo: coverImageView.rightAnchor, constant: 8).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8).isActive = true
         titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -10).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -20).isActive = true
         
         addSubview(authorLabel)
-        authorLabel.leftAnchor.constraint(equalTo: coverImageView.rightAnchor, constant: 8).isActive = true
+        authorLabel.leftAnchor.constraint(equalTo: coverImageView.rightAnchor, constant: 20).isActive = true
         authorLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8).isActive = true
         authorLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         authorLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4).isActive = true
+        
+        addSubview(dateReadLabel)
+        dateReadLabel.leftAnchor.constraint(equalTo: coverImageView.rightAnchor, constant: 8).isActive = true
+        dateReadLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8).isActive = true
+        dateReadLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        dateReadLabel.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 4).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
